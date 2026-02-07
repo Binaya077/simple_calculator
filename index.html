@@ -5,27 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Binaya | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
       background: #0d0d1a;
       color: #e0e0ff;
       line-height: 1.7;
       overflow-x: hidden;
+      /* 🔥 FIX: Push content below fixed navbar */
+      padding-top: 80px;
     }
-
     /* Smooth scroll */
     html {
       scroll-behavior: smooth;
     }
-
     /* ─── Navbar ─── */
     nav {
       position: fixed;
@@ -36,44 +35,42 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(120, 100, 255, 0.15);
       transition: all 0.4s;
+      /* Consistent height for padding calc */
+      height: 70px;
     }
-
     nav.scrolled {
       background: rgba(8, 8, 22, 0.97);
       box-shadow: 0 6px 30px rgba(0,0,0,0.45);
     }
-
     .nav-container {
       max-width: 1300px;
       margin: 0 auto;
-      padding: 1.1rem 6%;
+      padding: 0.8rem 6% 1rem; /* Slightly tighter vertical padding */
       display: flex;
       justify-content: space-between;
       align-items: center;
+      height: 70px;
     }
-
     .logo {
-      font-size: 1.9rem;
+      font-size: 1.7rem; /* 👀 Smaller for perfect desktop fit */
       font-weight: 800;
       background: linear-gradient(90deg, #a78bfa, #7c7fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     .nav-links {
       display: flex;
-      gap: 2.4rem;
+      gap: 2rem;
       list-style: none;
     }
-
     .nav-links a {
       color: #d0d6ff;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1rem; /* 👀 Adjusted for fit */
       transition: 0.35s;
       position: relative;
     }
-
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -84,17 +81,14 @@
       background: #7c7fff;
       transition: width 0.4s ease;
     }
-
     .nav-links a:hover::after,
     .nav-links a.active::after {
       width: 100%;
     }
-
     .nav-links a:hover,
     .nav-links a.active {
       color: #ffffff;
     }
-
     /* ─── Hero ─── */
     #home {
       min-height: 100vh;
@@ -102,64 +96,53 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0 6%;
+      padding: 2rem 6% 0; /* 🔥 Extra top padding as backup */
       background: linear-gradient(135deg, #0a0a1f 0%, #14142e 100%);
     }
-
     .hero-content {
       max-width: 950px;
     }
-
     .hero-content h1 {
-      font-size: clamp(2.2rem, 9vw, 6rem);
+      font-size: clamp(2.5rem, 8vw, 5.5rem); /* 👀 Slightly smaller clamp for fit */
       margin-bottom: 1.4rem;
       font-weight: 800;
     }
-
     .hero-content h1 span {
       background: linear-gradient(90deg, #c084fc, #7c7fff, #6366f1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     .hero-content h2 {
-      font-size: 1.7rem;
+      font-size: 1.6rem; /* 👀 Tweaked */
       color: #a5b4fc;
       margin: 1.5rem 0 2.5rem;
     }
-
     .typing {
       color: #7c7fff;
       font-weight: 700;
     }
-
     .cursor {
       color: #7c7fff;
       animation: blink 0.75s step-end infinite;
     }
-
     @keyframes blink {
       50% { opacity: 0; }
     }
-
     .socials {
       margin: 2.5rem 0 3rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
     }
-
     .socials a {
       color: #c3d2ff;
       font-size: 1.9rem;
       transition: all 0.4s;
     }
-
     .socials a:hover {
       color: #8b5cf6;
       transform: translateY(-10px) scale(1.15);
     }
-
     .btn {
       display: inline-block;
       padding: 1rem 2.4rem;
@@ -172,38 +155,32 @@
       transition: all 0.4s;
       border: none;
     }
-
     .btn:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 30px rgba(99,102,241,0.45);
     }
-
     .btn-outline {
       background: transparent;
       border: 2px solid #7c7fff;
       color: #7c7fff;
     }
-
     .btn-outline:hover {
       background: #7c7fff;
       color: white;
     }
-
     /* ─── Sections ─── */
     section {
       padding: 11rem 6% 9rem;
       max-width: 1300px;
       margin: 0 auto;
     }
-
     h2.section-title {
       text-align: center;
-      font-size: 3.4rem;
+      font-size: 3.2rem; /* 👀 Minor tweak */
       margin-bottom: 5rem;
       color: #a78bfa;
       position: relative;
     }
-
     h2.section-title::after {
       content: '';
       width: 140px;
@@ -215,7 +192,6 @@
       transform: translateX(-50%);
       border-radius: 3px;
     }
-
     /* About */
     #about .about-grid {
       display: grid;
@@ -223,25 +199,21 @@
       gap: 6rem;
       align-items: center;
     }
-
     .about-img img {
       width: 100%;
       border-radius: 20px;
       box-shadow: 0 15px 40px rgba(99,102,241,0.25);
       transition: all 0.5s;
     }
-
     .about-img:hover img {
       transform: scale(1.04);
     }
-
     /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1.8rem;
     }
-
     .skill-item {
       background: rgba(20, 20, 55, 0.55);
       border: 1px solid rgba(120,100,255,0.2);
@@ -252,32 +224,27 @@
       opacity: 0;
       transform: translateY(40px);
     }
-
     .skill-item.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .skill-item:hover {
       background: rgba(30,30,80,0.7);
       border-color: #7c7fff;
       transform: translateY(-12px);
       box-shadow: 0 20px 45px rgba(99,102,241,0.25);
     }
-
     .skill-item i {
       font-size: 3.2rem;
       color: #a78bfa;
       margin-bottom: 1.2rem;
     }
-
     /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 2.5rem;
     }
-
     .project-card {
       background: rgba(15,15,45,0.65);
       border-radius: 18px;
@@ -285,13 +252,11 @@
       border: 1px solid rgba(100,90,220,0.22);
       transition: all 0.5s;
     }
-
     .project-card:hover {
       transform: translateY(-18px);
       border-color: #7c7fff;
       box-shadow: 0 30px 60px rgba(0,0,0,0.5);
     }
-
     .project-img {
       height: 240px;
       background: #1e1e3a;
@@ -301,23 +266,19 @@
       font-size: 5rem;
       color: #555577;
     }
-
     .project-info {
       padding: 2rem;
     }
-
     .project-info h3 {
       color: #c4c9ff;
       margin-bottom: 1rem;
     }
-
     .tags {
       display: flex;
       gap: 0.8rem;
       flex-wrap: wrap;
       margin-top: 1.4rem;
     }
-
     .tag {
       background: rgba(124,127,255,0.18);
       color: #c4c9ff;
@@ -325,19 +286,16 @@
       border-radius: 50px;
       font-size: 0.9rem;
     }
-
     /* Contact */
     .contact-form {
       max-width: 680px;
       margin: 0 auto;
     }
-
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.8rem;
     }
-
     input, textarea {
       width: 100%;
       padding: 1.1rem 1.5rem;
@@ -347,11 +305,9 @@
       color: #f0f0ff;
       font-size: 1.1rem;
     }
-
     textarea {
       min-height: 180px;
     }
-
     /* Footer */
     footer {
       background: #080818;
@@ -359,16 +315,25 @@
       padding: 4rem 6%;
       border-top: 1px solid rgba(90,80,200,0.18);
     }
-
+    /* 👀 Mobile tweaks */
     @media (max-width: 768px) {
-      .nav-links { gap: 1.4rem; font-size: 0.95rem; }
-      #about .about-grid { grid-template-columns: 1fr; text-align: center; }
+      body { padding-top: 70px; }
+      nav { height: 65px; }
+      .nav-container { padding: 0.6rem 6% 0.8rem; height: 65px; }
+      .logo { font-size: 1.5rem; }
+      .nav-links { gap: 1.2rem; font-size: 0.95rem; }
+      #home { padding: 1.5rem 6% 0; }
+      #about .about-grid { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
       .form-row { grid-template-columns: 1fr; }
+      h2.section-title { font-size: 2.6rem; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { gap: 1rem; }
+      .socials { gap: 1.5rem; }
     }
   </style>
 </head>
 <body>
-
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-container">
@@ -382,47 +347,42 @@
       </ul>
     </div>
   </nav>
-
   <!-- Hero -->
   <section id="home">
     <div class="hero-content">
       <h1>Hi There, I'm <span>Binaya</span></h1>
       <h2>And I <span class="typing"></span><span class="cursor">|</span></h2>
-
       <div class="socials">
-        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/Binaya077" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
-
       <div>
         <a href="#projects" class="btn">See My Work</a>
         <a href="#contact" class="btn btn-outline">Let's Talk</a>
       </div>
     </div>
   </section>
-
   <!-- About -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about-grid">
       <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop" alt="Profile">
+        <!-- 🔥 YOUR LOCAL IMAGE - place binaya.jpg in same folder -->
+        <img src="binaya.jpg" alt="Binaya - Portfolio Photo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop'">
       </div>
       <div>
         <p style="font-size:1.25rem; margin-bottom:1.8rem;">
-          I'm a passionate <strong>web developer</strong> based in Kathmandu, focused on building clean, modern and user-centered digital experiences.
+          I'm a passionate <strong>web developer</strong> based in Kathmandu, Nepal, focused on building clean, modern and user-centered digital experiences. 🇳🇵
         </p>
         <p style="margin-bottom:1.8rem;">
-          I enjoy solving real problems with code — whether it's a fast frontend, scalable backend or beautiful UI/UX.
+          I enjoy solving real problems with code — whether it's a fast frontend with animations, Banker's algorithm simulations, or data viz like Excel histograms & Bayes theorem apps.
         </p>
         <p>
-          Currently exploring React, Next.js, Node.js, Tailwind and everything needed to ship great products.
+          Currently mastering React, Next.js, Node.js, Tailwind + DSA (data structures). Inspired by Nepali devs like Ishore Acharya!
         </p>
       </div>
     </div>
   </section>
-
   <!-- Skills -->
   <section id="skills">
     <h2 class="section-title">My Skills</h2>
@@ -437,52 +397,42 @@
       <div class="skill-item"><i class="fab fa-git-alt"></i><p>Git</p></div>
     </div>
   </section>
-
   <!-- Projects -->
   <section id="projects">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-img">Project 1</div>
+        <div class="project-img"><i class="fas fa-shopping-cart" style="font-size:4rem; color:#7c7fff;"></i></div>
         <div class="project-info">
           <h3>E-Commerce Dashboard</h3>
-          <p>Full-featured online store with admin panel, cart & payment</p>
+          <p>Full-featured online store with admin panel, cart & payment integration</p>
           <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Node</span>
-            <span class="tag">MongoDB</span>
+            <span class="tag">React</span><span class="tag">Node</span><span class="tag">MongoDB</span>
           </div>
         </div>
       </div>
-
       <div class="project-card">
-        <div class="project-img">Project 2</div>
+        <div class="project-img"><i class="fas fa-tasks" style="font-size:4rem; color:#a78bfa;"></i></div>
         <div class="project-info">
           <h3>Task Tracker App</h3>
-          <p>Kanban board with drag-drop, dark mode and real-time sync</p>
+          <p>Kanban board with drag-drop, dark mode and real-time sync (like your Banker's algo!)</p>
           <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">Tailwind</span>
+            <span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Tailwind</span>
           </div>
         </div>
       </div>
-
       <div class="project-card">
-        <div class="project-img">Project 3</div>
+        <div class="project-img"><i class="fas fa-chart-line" style="font-size:4rem; color:#6366f1;"></i></div>
         <div class="project-info">
-          <h3>Personal Finance Tracker</h3>
-          <p>Expense manager with charts, categories and export</p>
+          <h3>Student Marks Analyzer</h3>
+          <p>Excel-like dashboard with histograms, scatter plots & boxplots for 50+ student records</p>
           <div class="tags">
-            <span class="tag">Next.js</span>
-            <span class="tag">Chart.js</span>
-            <span class="tag">Supabase</span>
+            <span class="tag">Next.js</span><span class="tag">Chart.js</span><span class="tag">Supabase</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Contact -->
   <section id="contact">
     <h2 class="section-title">Get In Touch</h2>
@@ -496,28 +446,25 @@
           <input type="text" placeholder="Subject" required>
         </div>
         <div>
-          <textarea placeholder="Your Message..." required></textarea>
+          <textarea placeholder="Your Message... (Love the portfolio? Let's collab on DSA or React!)" required></textarea>
         </div>
         <button type="submit" class="btn" style="width:100%; margin-top:2rem; padding:1.2rem;">Send Message</button>
       </form>
     </div>
   </section>
-
   <!-- Footer -->
   <footer>
-    <p>© 2026 Binaya. Built with passion in Kathmandu.</p>
+    <p>© 2026 Binaya | binayapokhrel.com.np</p>
   </footer>
 
 <script>
-// Navbar scroll
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
   document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 80);
 });
-
-// Active nav link
+// Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navA = document.querySelectorAll('.nav-links a');
-
 window.addEventListener('scroll', () => {
   let current = 'home';
   sections.forEach(sec => {
@@ -530,18 +477,15 @@ window.addEventListener('scroll', () => {
     if (a.getAttribute('href') === `#${current}`) a.classList.add('active');
   });
 });
-
-// Typing effect
+// 🔥 Typing effect (your fave from last time!)
 const typingEl = document.querySelector('.typing');
-const words = ["Web Developer", "Learner", "Creator", "Problem Solver"];
+const words = ["Web Developer", "Front-End Creator", "DSA Enthusiast", "Kathmandu Coder"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-
 function typeEffect() {
   const currentWord = words[wordIndex];
   typingEl.textContent = currentWord.substring(0, charIndex);
-
   if (!isDeleting && charIndex < currentWord.length) {
     charIndex++;
     setTimeout(typeEffect, 110);
@@ -557,8 +501,7 @@ function typeEffect() {
   }
 }
 typeEffect();
-
-// Skill animation on scroll
+// Skill animations on scroll
 const skillItems = document.querySelectorAll('.skill-item');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -567,16 +510,13 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.2 });
-
 skillItems.forEach(item => observer.observe(item));
-
-// Form demo
+// Contact form demo
 document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
-  alert("Message sent! (This is just a demo — connect real backend later)");
+  alert("Thanks Binaya's fan! 🚀 Message sent (demo mode—add EmailJS next?)");
   e.target.reset();
 });
 </script>
-
 </body>
 </html>
