@@ -12,6 +12,10 @@
       padding: 0;
       box-sizing: border-box;
     }
+     .discrete
+    {
+      color:#a5b4fc;
+    }
     body {
       font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
       background: #0d0d1a;
@@ -103,7 +107,7 @@
       max-width: 950px;
     }
     .hero-content h1 {
-      font-size: clamp(2.5rem, 4vw, 5.5rem); /* 👀 Slightly smaller clamp for fit */
+      font-size: clamp(2.5rem, 8vw, 5.5rem); /* 👀 Slightly smaller clamp for fit */
       margin-bottom: 1.4rem;
       font-weight: 800;
     }
@@ -331,6 +335,7 @@
       .nav-links { gap: 1rem; }
       .socials { gap: 1.5rem; }
     }
+   
   </style>
 </head>
 <body>
@@ -341,8 +346,7 @@
       <ul class="nav-links">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#Notes">Notes</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -357,7 +361,7 @@
         <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
       <div>
-        <a href="#projects" class="btn">See My Work</a>
+        <a href="#Notes" class="btn">See My Work</a>
         <a href="#contact" class="btn btn-outline">Let's Talk</a>
       </div>
     </div>
@@ -375,7 +379,7 @@
           I'm a passionate <strong>web developer</strong> based in Kathmandu, Nepal, focused on building clean, modern and user-centered digital experiences. 🇳🇵
         </p>
         <p style="margin-bottom:1.8rem;">
-          I enjoy solving real problems with code — whether it's a fast frontend with animations, Banker's algorithm simulations, or data viz like Excel histograms & Bayes theorem apps.
+          I enjoy solving real problems with code — whether it's a fast frontend with animations.
         </p>
         <p>
           Currently mastering React, Next.js, Node.js, Tailwind + DSA (data structures).
@@ -383,56 +387,83 @@
       </div>
     </div>
   </section>
-  <!-- Skills -->
-  <section id="skills">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
-      <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS3 / Tailwind</p></div>
-      <div class="skill-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
-      <div class="skill-item"><i class="fab fa-react"></i><p>React.js</p></div>
-      <div class="skill-item"><i class="fab fa-node-js"></i><p>Node.js</p></div>
-      <div class="skill-item"><i class="fas fa-database"></i><p>MongoDB</p></div>
-      <div class="skill-item"><i class="fas fa-server"></i><p>Express</p></div>
-      <div class="skill-item"><i class="fab fa-git-alt"></i><p>Git</p></div>
-    </div>
-  </section>
+  
   <!-- Projects -->
-  <section id="projects">
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-img"><i class="fas fa-shopping-cart" style="font-size:4rem; color:#7c7fff;"></i></div>
-        <div class="project-info">
-          <h3>E-Commerce Dashboard</h3>
-          <p>Full-featured online store with admin panel, cart & payment integration</p>
-          <div class="tags">
-            <span class="tag">React</span><span class="tag">Node</span><span class="tag">MongoDB</span>
-          </div>
+  <!-- Subjects / Notes Section (replacing Contact) -->
+<section id="Notes" style="padding: 11rem 6% 9rem;">
+  <h2 class="section-title">My Study Notes</h2>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 4rem; color: #a5b4fc; font-size: 1.15rem;">
+    Explore my digital notes on core CS subjects. 
+  </p>
+
+  <div class="notes-grid" style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  ">
+    <!-- Discrete Structures (already in your portfolio, but adding for completeness) -->
+    <!-- <a href="pdf-viewer.html?file=YOUR_DISCRETE_PDF_URL_HERE&subject=Discrete%20Structures%20-%20Unit%201" class="project-card" target="_blank" style="text-decoration:none;">
+      <div class="project-img" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">
+        <img src="https://img.icons8.com/fluency/96/venn-diagram.png" alt="Discrete" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
+      </div>
+      <div class="project-info">
+        <h3>Discrete Structures</h3>
+        <p class="discrete">Sets, Relations, Graphs, Logic, Proofs, Combinatorics & more. Handwritten notes.</p>
+       
+        <div style="margin-top:1.5rem; text-align:center;">
+          <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-img"><i class="fas fa-tasks" style="font-size:4rem; color:#a78bfa;"></i></div>
-        <div class="project-info">
-          <h3>Task Tracker App</h3>
-          <p>Kanban board with drag-drop, dark mode and real-time sync (like your Banker's algo!)</p>
-          <div class="tags">
-            <span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Tailwind</span>
-          </div>
+    </a> -->
+
+    <!-- DSA -->
+    <a href="dsa_page.html" class="project-card" target="_blank" style="text-decoration:none;">
+      <div class="project-img" style="background: linear-gradient(135deg, #e11d48, #f43f5e);">
+        <img src="https://img.icons8.com/fluency/96/binary-tree.png" alt="DSA" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
+      </div>
+      <div class="project-info">
+        <h3>Data Structures & Algorithms</h3>
+        <p class="discrete">Arrays, Linked Lists, Trees, Graphs, Sorting, Searching, DP, Greedy...</p>
+        
+        <div style="margin-top:1.5rem; text-align:center;">
+          <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-img"><i class="fas fa-chart-line" style="font-size:4rem; color:#6366f1;"></i></div>
-        <div class="project-info">
-          <h3>Student Marks Analyzer</h3>
-          <p>Excel-like dashboard with histograms, scatter plots & boxplots for 50+ student records</p>
-          <div class="tags">
-            <span class="tag">Next.js</span><span class="tag">Chart.js</span><span class="tag">Supabase</span>
-          </div>
+    </a>
+
+    <!-- Operating Systems -->
+    <a href="os_page.html" class="project-card" target="_blank" style="text-decoration:none;">
+      <div class="project-img" style="background: linear-gradient(135deg, #059669, #10b981);">
+        <img src="https://img.icons8.com/fluency/96/system-task.png" alt="OS" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
+      </div>
+      <div class="project-info">
+        <h3>Operating Systems</h3>
+        <p class="discrete">Processes, Threads, Scheduling, Memory Management, Deadlocks, File Systems...</p>
+        
+        <div style="margin-top:1.5rem; text-align:center;">
+          <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
         </div>
       </div>
-    </div>
-  </section>
+    </a>
+
+    <!-- Data Mining -->
+    <a href="datamining_page.html" class="project-card" target="_blank" style="text-decoration:none;">
+      <div class="project-img" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+        <img src="https://img.icons8.com/fluency/96/data-mining.png" alt="Data Mining" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
+      </div>
+      <div class="project-info">
+        <h3>Data Mining</h3>
+        <p class="discrete">Apriori, FP-Growth, Clustering, Classification, Association Rules, Big Data...</p>
+       
+        <div style="margin-top:1.5rem; text-align:center;">
+          <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
   <!-- Contact -->
   <section id="contact">
     <h2 class="section-title">Get In Touch</h2>
