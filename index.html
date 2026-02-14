@@ -118,7 +118,7 @@
     }
     .hero-content h2 {
       font-size: 1.6rem; /* 👀 Tweaked */
-      color: #a5b4fc;
+      color: white;
       margin: 1.5rem 0 2.5rem;
     }
     .typing {
@@ -316,7 +316,7 @@
     footer {
       background: #080818;
       text-align: center;
-      padding: 4rem 6%;
+      padding: 1rem 6%;
       border-top: 1px solid rgba(90,80,200,0.18);
     }
     /* 👀 Mobile tweaks */
@@ -335,7 +335,63 @@
       .nav-links { gap: 1rem; }
       .socials { gap: 1.5rem; }
     }
-   
+    /* Make the section position relative so children can be positioned inside it */
+#home {
+  position: relative;           /* ← important */
+  min-height: 100vh;            /* full viewport height – adjust if needed */
+  overflow: hidden;             /* hide any overflowing video parts */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;                 /* better visibility on dark video */
+}
+
+/* The video itself */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 45%;
+  height: 45%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;            /* ← key property: covers like background-size: cover */
+  z-index: 1;                   /* behind content but above background color if any */
+}
+
+/* Optional overlay for better text contrast */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* semi-dark overlay – adjust opacity 0.3–0.6 */
+  z-index: 2;
+}
+
+/* Your content on top */
+.hero-content {
+  position: relative;
+  z-index: 3;                   /* above video + overlay */
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+/* Optional: make text stand out more */
+.hero-content h1,
+.hero-content h2 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+   @media (max-width: 768px) {
+  .hero-video {
+    display: none;
+  }
+  .logo
+  {
+    display: none;
+  }
+}
+  
   </style>
 </head>
 <body>
@@ -353,19 +409,28 @@
   </nav>
   <!-- Hero -->
   <section id="home">
-    <div class="hero-content">
-      <h1>Hi There, I'm <span>Binaya</span></h1>
-      <h2>And I <span class="typing"></span><span class="cursor">|</span></h2>
-      <div class="socials">
-        <a href="https://github.com/Binaya077" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div>
-        <a href="#Notes" class="btn">See My Work</a>
-        <a href="#contact" class="btn btn-outline">Let's Talk</a>
-      </div>
+  <!-- Background video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video/bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional: semi-transparent overlay to improve text readability -->
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Hi There, I'm Binaya</h1>
+    <h2>And I <span class="typing"></span><span class="cursor">|</span></h2>
+    <div class="socials">
+      <a href="https://github.com/Binaya077" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
-  </section>
+    <div>
+      <a href="#Notes" class="btn">See My Work</a>
+      <a href="#contact" class="btn">Let's Talk</a>
+    </div>
+  </div>
+</section>
   <!-- About -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
@@ -382,7 +447,7 @@
           I enjoy solving real problems with code — whether it's a fast frontend with animations.
         </p>
         <p>
-          Currently mastering React, Next.js, Node.js, Tailwind + DSA (data structures).
+          Currently mastering React, Next.js, Node.js, Tailwind.
         </p>
       </div>
     </div>
@@ -405,24 +470,32 @@
   ">
     <!-- Discrete Structures (already in your portfolio, but adding for completeness) -->
     <a href="discrete_structure.html" class="project-card" target="_blank" style="text-decoration:none;">
-      <div class="project-img" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">
-        <img src="https://img.icons8.com/fluency/96/system-task.png" alt="Discrete" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
-      </div>
-      <div class="project-info">
-        <h3>Discrete Structures</h3>
-        <p class="discrete">Sets, Relations, Graphs, Logic, Proofs, Combinatorics & more. Handwritten notes.</p>
-       
-        <div style="margin-top:1.5rem; text-align:center;">
-          <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
-        </div>
-      </div>
-    </a>
+  <div class="project-img" 
+       style="background: linear-gradient(135deg, #4f46e5, #7c3aed); 
+              background-image: url('image/disc.png');  /* ← your image as bg */
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+  </div>
+  <div class="project-info">
+    <h3>Discrete Structures</h3>
+    <p class="discrete">Sets, Relations, Graphs, Logic, Proofs, Combinatorics & more. Handwritten notes.</p>
+    
+    <div style="margin-top:1.5rem; text-align:center;">
+      <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
+    </div>
+  </div>
+</a>
 
     <!-- DSA -->
     <a href="dsa_page.html" class="project-card" target="_blank" style="text-decoration:none;">
-      <div class="project-img" style="background: linear-gradient(135deg, #e11d48, #f43f5e);">
-        <img src="https://img.icons8.com/fluency/96/binary-tree.png" alt="DSA" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
-      </div>
+      <div class="project-img" 
+       style="background: linear-gradient(135deg, #4f46e5, #7c3aed); 
+              background-image: url('image/dsa.png');  /* ← your image as bg */
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+  </div>
       <div class="project-info">
         <h3>Data Structures & Algorithms</h3>
         <p class="discrete">Arrays, Linked Lists, Trees, Graphs, Sorting, Searching, DP, Greedy...</p>
@@ -435,9 +508,13 @@
 
     <!-- Operating Systems -->
     <a href="os_page.html" class="project-card" target="_blank" style="text-decoration:none;">
-      <div class="project-img" style="background: linear-gradient(135deg, #059669, #10b981);">
-        <img src="https://img.icons8.com/fluency/96/system-task.png" alt="OS" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
-      </div>
+     <div class="project-img" 
+       style="background: linear-gradient(135deg, #4f46e5, #7c3aed); 
+              background-image: url('image/os.png');  /* ← your image as bg */
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+  </div>
       <div class="project-info">
         <h3>Operating Systems</h3>
         <p class="discrete">Processes, Threads, Scheduling, Memory Management, Deadlocks, File Systems...</p>
@@ -450,9 +527,13 @@
 
     <!-- Data Mining -->
     <a href="datamining_page.html" class="project-card" target="_blank" style="text-decoration:none;">
-      <div class="project-img" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
-        <img src="https://img.icons8.com/fluency/96/data-mining.png" alt="Data Mining" style="filter: brightness(0) invert(1); width: 90px; height: 90px;">
-      </div>
+      <div class="project-img" 
+       style="background: linear-gradient(135deg, #4f46e5, #7c3aed); 
+              background-image: url('image/datamin.png');  /* ← your image as bg */
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat;">
+  </div>
       <div class="project-info">
         <h3>Data Mining</h3>
         <p class="discrete">Apriori, FP-Growth, Clustering, Classification, Association Rules, Big Data...</p>
@@ -477,7 +558,7 @@
           <input type="text" placeholder="Subject" required>
         </div>
         <div>
-          <textarea placeholder="Your Message... (Love the portfolio? Let's collab on DSA or React!)" required></textarea>
+          <textarea placeholder="Your Message..." required></textarea>
         </div>
         <button type="submit" class="btn" style="width:100%; margin-top:2rem; padding:1.2rem;">Send Message</button>
       </form>
@@ -485,7 +566,12 @@
   </section>
   <!-- Footer -->
   <footer>
-    <p>© 2026 Binaya | binayapokhrel.com.np</p>
+       <p>© 2026 Binaya | binayapokhrel.com.np</p>
+    <div class="socials">
+      <a href="https://github.com/Binaya077" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+ 
   </footer>
 
 <script>
@@ -510,7 +596,7 @@ window.addEventListener('scroll', () => {
 });
 // 🔥 Typing effect (your fave from last time!)
 const typingEl = document.querySelector('.typing');
-const words = ["Web Developer", "Front-End Creator", "DSA Enthusiast", "Kathmandu Coder"];
+const words = ["Web Developer", "Front-End Creator"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
