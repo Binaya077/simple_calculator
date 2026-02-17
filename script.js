@@ -68,4 +68,33 @@
       }
       type();
     }
+
+    // certificate pop up
+// Get elements
+const modal = document.getElementById("certificateModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close-modal");
+
+// Find the button in the Machine Learning card
+const viewCertBtn = document.querySelector(".certificate-card button");
+
+// When button is clicked → open modal
+viewCertBtn.addEventListener("click", function() {
+  modal.style.display = "block";
+  // Optional: you can change image src dynamically if needed later
+  // modalImg.src = this.getAttribute("data-image") || "/image/python.jpeg";
+});
+
+// Close when clicking ×
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Close when clicking outside the image
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
   
