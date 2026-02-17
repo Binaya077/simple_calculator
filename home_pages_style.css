@@ -500,7 +500,7 @@
   50%      { transform: translateX(-50%) translateY(-14px) rotate(4deg); }
 }
 
-/* ─── IMPROVED CERTIFICATE IMAGE AREA ─── */
+/* .certificate-area */
 .certificate-image {
   position: relative;
   height: 260px;                    /* ← adjust this value: 220–300px depending on your taste */
