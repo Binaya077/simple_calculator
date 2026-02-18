@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://binayapokhrel.com.np/sitemap.xml
