@@ -1,237 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Binaya | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home_pages_style.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home_pages_style.css" />
+    <title>Binaya Pokhrel | Web Developer in Nepal</title>
+    <meta
+      name="description"
+      content="Binaya Pokhrel is a web developer from Kathmandu, Nepal. Specializing in React, Next.js, and modern web development."
+    />
 
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <div class="logo">Binaya Pokhrel</div>
+    <meta
+      name="keywords"
+      content="Binaya Pokhrel, Web Developer Nepal, React Developer Nepal, Kathmandu Developer"
+    />
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <meta name="author" content="Binaya Pokhrel" />
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#Notes">Notes</a></li>
-        <li><a href="#certificates">Certificate</a></li>
-        <li><a href="#contact">Contact</a></li>
-        
-      </ul>
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="logo">Binaya Pokhrel</div>
 
-      <div class="theme-toggle-desktop">
-        <button id="themeBtn-desktop" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Notes">Notes</a></li>
+          <li><a href="#certificates">Certificate</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="theme-toggle-desktop">
+          <button id="themeBtn-desktop" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Hero -->
-  <section id="home">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="video/bg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
+    <!-- Hero -->
+    <section id="home">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="video/bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-      <h1>Hi There, I'm Binaya</h1>
-      <h2>And I <span class="typing">build things</span><span class="cursor">|</span></h2>
-      <div class="socials">
-        <a href="https://github.com/Binaya077" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div>
-        <a href="#Notes" class="btn">See My Work</a>
-        <a href="#contact" class="btn">Let's Talk</a>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <div class="about-img">
-        <img src="image/binaya.jpg" alt="Binaya Pokhrel">
-      </div>
-      <div>
-        <p style="font-size:1.25rem; margin-bottom:1.8rem;">
-          I'm a passionate <strong>web developer</strong> based in Kathmandu, Nepal, focused on building clean, modern and user-centered digital experiences. 🇳🇵
-        </p>
-        <p style="margin-bottom:1.8rem;">
-          I enjoy solving real problems with code — whether it's a fast frontend with animations.
-        </p>
-        <p>Currently mastering React, Next.js, Node.js, Tailwind.</p>
-      </div>
-    </div>
-  </section>
-  <!-- ===================== CERTIFICATES SECTION ===================== -->
- <section class="certificates-section" id="certificates">
-    <div class="container">
-      <h2 class="section-title">Certifications</h2>
-
-      <div class="certificates-grid">
-
-        <!-- Certificate 1 -->
-        <div class="certificate-card">
-          <div class="ribbon">AWS Certified</div>
-          <div class="certificate-image">
-            <img 
-              src="image/aws.jpeg" 
-              alt="AWS Certified Cloud Practitioner Certificate"
-              loading="lazy"
-            >
-          </div>
-          <div class="certificate-content">
-            <h3>AWS Certified Cloud Practitioner</h3>
-            <p class="issuer">Amazon Web Services</p>
-            <p class="date">December 05, 2023 • Expires:  December 05, 2026</p>
-            <a 
-              href="https://www.credly.com/badges/719e9d66-f7d1-41e0-a80d-3349d81aca88/linked_in?t=s58u3l" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="btn-verify"
-            >
-              View on Credly
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 2 -->
-        <div class="certificate-card">
-          <div class="ribbon">Machine Learning</div>
-          <div class="certificate-image">
-            <img 
-              src="/image/python.jpeg" 
-              alt="Python with Machine Learning Certificate"
-              loading="lazy"
-            >
-          </div>
-          <div class="certificate-content">
-            <h3>Python with Machine Learning</h3>
-            <p class="issuer">Code IT</p>
-            <p class="date">Completed: February 20 2026</p>
-            <button class="btn-verify" onclick="openModal()">View Certificate</button>
-              
-          </div>
-        </div>
-
-        <!-- You can add more cards here -->
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Notes -->
-  <section id="Notes">
-    <h2 class="section-title">My Study Notes</h2>
-    <p style="text-align:center; max-width:700px; margin:0 auto 4rem; color:var(--text-muted); font-size:1.15rem;">
-      Explore my digital notes on core CS subjects.
-    </p>
-
-    <div class="notes-grid">
-      <a href="discrete_structure.html" class="project-card" target="_blank">
-        <div class="project-img" style="background-image:url('image/disc.png');"></div>
-        <div class="project-info">
-          <h3>Discrete Structures</h3>
-          <p class="discrete">Sets, Relations, Graphs, Logic, Proofs, Combinatorics & more.</p>
-          <div style="margin-top:1.5rem; text-align:center;">
-            <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="dsa_page.html" class="project-card" target="_blank">
-        <div class="project-img" style="background-image:url('image/dsa.png');"></div>
-        <div class="project-info">
-          <h3>Data Structures & Algorithms</h3>
-          <p class="discrete">Arrays, Linked Lists, Trees, Graphs, Sorting, DP...</p>
-          <div style="margin-top:1.5rem; text-align:center;">
-            <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="os_page.html" class="project-card" target="_blank">
-        <div class="project-img" style="background-image:url('image/os.png');"></div>
-        <div class="project-info">
-          <h3>Operating Systems</h3>
-          <p class="discrete">Processes, Threads, Scheduling, Memory, Deadlocks...</p>
-          <div style="margin-top:1.5rem; text-align:center;">
-            <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="datamining_page.html" class="project-card" target="_blank">
-        <div class="project-img" style="background-image:url('image/datamin.png');"></div>
-        <div class="project-info">
-          <h3>Data Mining</h3>
-          <p class="discrete">Apriori, Clustering, Classification, Association Rules...</p>
-          <div style="margin-top:1.5rem; text-align:center;">
-            <span class="btn" style="padding:0.9rem 2rem; font-size:1rem;">View Notes →</span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-form">
-      <form id="contactForm">
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-        </div>
-        <div style="margin:1.8rem 0;">
-          <input type="text" placeholder="Subject" required>
+      <div class="hero-content">
+        <h1>Hi There, I'm Binaya</h1>
+        <h2>
+          And I <span class="typing">build things</span
+          ><span class="cursor">|</span>
+        </h2>
+        <div class="socials">
+          <a href="https://github.com/Binaya077" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
         <div>
-          <textarea placeholder="Your Message..." required></textarea>
+          <a href="#Notes" class="btn">See My Work</a>
+          <a href="#contact" class="btn">Let's Talk</a>
         </div>
-        <button type="submit" class="btn" style="width:100%; margin-top:2rem; padding:1.2rem;">Send Message</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-       <p>© 2026 Binaya | binayapokhrel.com.np</p>
-    <div class="socials">
-      <a href="https://github.com/Binaya077" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
- 
-  </footer>
-<!-- Modal for certificate popup -->
-<div id="certificateModal" class="modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <img 
-      id="modalImage" 
-      src="/image/python.jpeg" 
-      alt="Python with Machine Learning Certificate - Full View"
-    >
-    <p>Python with Machine Learning - Code IT</p>
-  </div>
-</div>
- <script src="script.js"></script>
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="image/binaya.jpg" alt="Binaya Pokhrel" />
+        </div>
+        <div>
+          <p style="font-size: 1.25rem; margin-bottom: 1.8rem">
+            I'm a passionate <strong>web developer</strong> based in Kathmandu,
+            Nepal, focused on building clean, modern and user-centered digital
+            experiences. 🇳🇵
+          </p>
+          <p style="margin-bottom: 1.8rem">
+            I enjoy solving real problems with code — whether it's a fast
+            frontend with animations.
+          </p>
+          <p>Currently mastering React, Next.js, Node.js, Tailwind.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== CERTIFICATES SECTION ===================== -->
+    <section class="certificates-section" id="certificates">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
 
-</body>
+        <div class="certificates-grid">
+          <!-- Certificate 1 -->
+          <div class="certificate-card">
+            <div class="ribbon">AWS Certified</div>
+            <div class="certificate-image">
+              <img
+                src="image/aws.jpeg"
+                alt="AWS Certified Cloud Practitioner Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="certificate-content">
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <p class="issuer">Amazon Web Services</p>
+              <p class="date">December 05, 2023 • Expires: December 05, 2026</p>
+              <a
+                href="https://www.credly.com/badges/719e9d66-f7d1-41e0-a80d-3349d81aca88/linked_in?t=s58u3l"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-verify"
+              >
+                View on Credly
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="certificate-card">
+            <div class="ribbon">Machine Learning</div>
+            <div class="certificate-image">
+              <img
+                src="/image/python.jpeg"
+                alt="Python with Machine Learning Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="certificate-content">
+              <h3>Python with Machine Learning</h3>
+              <p class="issuer">Code IT</p>
+              <p class="date">Completed: February 20 2026</p>
+              <button class="btn-verify" onclick="openModal()">
+                View Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- You can add more cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Notes -->
+    <section id="Notes">
+      <h2 class="section-title">My Study Notes</h2>
+      <p
+        style="
+          text-align: center;
+          max-width: 700px;
+          margin: 0 auto 4rem;
+          color: var(--text-muted);
+          font-size: 1.15rem;
+        "
+      >
+        Explore my digital notes on core CS subjects.
+      </p>
+
+      <div class="notes-grid">
+        <a href="discrete_structure.html" class="project-card" target="_blank">
+          <div
+            class="project-img"
+            style="background-image: url(&quot;image/disc.png&quot;)"
+          ></div>
+          <div class="project-info">
+            <h3>Discrete Structures</h3>
+            <p class="discrete">
+              Sets, Relations, Graphs, Logic, Proofs, Combinatorics & more.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: center">
+              <span class="btn" style="padding: 0.9rem 2rem; font-size: 1rem"
+                >View Notes →</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a href="dsa_page.html" class="project-card" target="_blank">
+          <div
+            class="project-img"
+            style="background-image: url(&quot;image/dsa.png&quot;)"
+          ></div>
+          <div class="project-info">
+            <h3>Data Structures & Algorithms</h3>
+            <p class="discrete">
+              Arrays, Linked Lists, Trees, Graphs, Sorting, DP...
+            </p>
+            <div style="margin-top: 1.5rem; text-align: center">
+              <span class="btn" style="padding: 0.9rem 2rem; font-size: 1rem"
+                >View Notes →</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a href="os_page.html" class="project-card" target="_blank">
+          <div
+            class="project-img"
+            style="background-image: url(&quot;image/os.png&quot;)"
+          ></div>
+          <div class="project-info">
+            <h3>Operating Systems</h3>
+            <p class="discrete">
+              Processes, Threads, Scheduling, Memory, Deadlocks...
+            </p>
+            <div style="margin-top: 1.5rem; text-align: center">
+              <span class="btn" style="padding: 0.9rem 2rem; font-size: 1rem"
+                >View Notes →</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <a href="datamining_page.html" class="project-card" target="_blank">
+          <div
+            class="project-img"
+            style="background-image: url(&quot;image/datamin.png&quot;)"
+          ></div>
+          <div class="project-info">
+            <h3>Data Mining</h3>
+            <p class="discrete">
+              Apriori, Clustering, Classification, Association Rules...
+            </p>
+            <div style="margin-top: 1.5rem; text-align: center">
+              <span class="btn" style="padding: 0.9rem 2rem; font-size: 1rem"
+                >View Notes →</span
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div style="margin: 1.8rem 0">
+            <input type="text" placeholder="Subject" required />
+          </div>
+          <div>
+            <textarea placeholder="Your Message..." required></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn"
+            style="width: 100%; margin-top: 2rem; padding: 1.2rem"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Binaya | binayapokhrel.com.np</p>
+      <div class="socials">
+        <a href="https://github.com/Binaya077" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/binaya-pokhrel-72b52a277/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <!-- Modal for certificate popup -->
+    <div id="certificateModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          id="modalImage"
+          src="/image/python.jpeg"
+          alt="Python with Machine Learning Certificate - Full View"
+        />
+        <p>Python with Machine Learning - Code IT</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
