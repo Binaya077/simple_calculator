@@ -222,6 +222,14 @@
       color: var(--accent);
       transform: translateY(-8px) scale(1.15);
     }
+@media (max-width: 600px) {
+  .additionalinfo {
+    display:flex; /* stack buttons */
+   
+    align-items: center; /* optional for center */
+  }
+ 
+}
 
     .btn {
       display: inline-block;
