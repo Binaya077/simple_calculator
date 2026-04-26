@@ -208,4 +208,109 @@
         font-size: 1.4rem;
       }
     }
+/* //css pastquestion pop up */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 8% auto;
+      padding: 2.5rem;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 480px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+    }
+
+    [data-theme="dark"] .modal-content {
+      background-color: #1e2937;
+      color: #e2e8f0;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 1rem;
+      color: #4f46e5;
+    }
+
+    [data-theme="dark"] .modal-content h2 {
+      color: #818cf8;
+    }
+
+    .modal-content p {
+      color: #64748b;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    [data-theme="dark"] .modal-content p {
+      color: #94a3b8;
+    }
+
+    .pdf-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .pdf-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s;
+    }
+
+    [data-theme="dark"] .pdf-item {
+      background: #334155;
+      border-color: #475569;
+    }
+
+    .pdf-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .download-btn {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #4338ca;
+      transform: scale(1.05);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #64748b;
+    }
+
+    [data-theme="dark"] .close-modal {
+      color: #94a3b8;
+    }
   
