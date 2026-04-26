@@ -646,3 +646,93 @@
     font-size: 35px;
   }
 }
+
+/* ===================== DIPLOMA IN IT SYLLABUS POPUP CSS ===================== */
+
+/* Main Modal Container */
+#syllabusPopup.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Modal Content Box */
+#syllabusPopup .modal-content {
+  background: var(--card-bg, #ffffff);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 460px;
+  padding: 2.8rem 2rem 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  animation: popupAppear 0.4s ease forwards;
+  text-align: center;
+}
+
+[data-theme="dark"] #syllabusPopup .modal-content {
+  background: #1e2937;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button */
+#syllabusPopup .close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.2rem;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#syllabusPopup .close-modal:hover {
+  color: #ef4444;
+}
+
+/* Animation */
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Icon Styling */
+#syllabusPopup .modal-content i.fa-graduation-cap {
+  color: #4f46e5;
+}
+
+/* Button Styling */
+#syllabusPopup .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#syllabusPopup .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+/* Maybe Later Button */
+#syllabusPopup button[onclick="closeSyllabusPopup()"] {
+  transition: all 0.3s ease;
+}
+
+#syllabusPopup button[onclick="closeSyllabusPopup()"]:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
