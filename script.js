@@ -69,7 +69,7 @@
       type();
     }
 
-    // certificate pop up
+   
 // Get elements
 const modal = document.getElementById("certificateModal");
 const modalImg = document.getElementById("modalImage");
@@ -96,5 +96,18 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 });
+ // Show Syllabus Popup when page loads
+    window.onload = function() {
+      setTimeout(() => {
+        const popup = document.getElementById('syllabusPopup');
+        if (popup) {
+          popup.style.display = 'flex';
+        }
+      }, 1200); // 1.2 second delay after page load
+    };
 
+    function closeSyllabusPopup() {
+      const popup = document.getElementById('syllabusPopup');
+      if (popup) popup.style.display = 'none';
+    }
   
