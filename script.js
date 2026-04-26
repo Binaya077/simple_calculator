@@ -110,4 +110,33 @@ window.addEventListener("click", function(event) {
       const popup = document.getElementById('syllabusPopup');
       if (popup) popup.style.display = 'none';
     }
-  
+
+
+    // Scroll Animation using Intersection Observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 100); // Stagger effect
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      // Observe all animated elements
+      document.querySelectorAll('.section-title, .certificate-card, .project-card, .about-img').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Navbar scroll effect
+      window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 100) {
+          navbar.classList.add('nav-scrolled');
+        } else {
+          navbar.classList.remove('nav-scrolled');
+        }
+      });
