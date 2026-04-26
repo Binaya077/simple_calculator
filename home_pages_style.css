@@ -735,3 +735,129 @@
 #syllabusPopup button[onclick="closeSyllabusPopup()"]:hover {
   background: rgba(148, 163, 184, 0.1);
 }
+
+/* animation in home page */
+
+* {
+        scroll-behavior: smooth;
+      }
+
+      .section-title {
+        position: relative;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .section-title.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Hero Animations */
+      .hero-content h1,
+      .hero-content h2 {
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 1s forwards;
+      }
+
+      .hero-content h1 { animation-delay: 0.3s; }
+      .hero-content h2 { animation-delay: 0.6s; }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Typing Cursor */
+      .typing {
+        position: relative;
+      }
+
+      .cursor {
+        animation: blink 0.8s step-end infinite;
+      }
+
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+
+      /* Card Animations */
+      .certificate-card,
+      .project-card {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .certificate-card.visible,
+      .project-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .certificate-card:hover,
+      .project-card:hover {
+        transform: translateY(-15px) scale(1.03);
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+      }
+
+      /* About Image Animation */
+      .about-img img {
+        opacity: 0;
+        transform: scale(0.85) rotate(-5deg);
+        transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .about-img.visible img {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+
+      /* Form Animations */
+      .form-row input,
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        transition: all 0.3s ease;
+      }
+
+      .form-row input:focus,
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      textarea:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+      }
+
+      /* Modal Animation */
+      .modal {
+        animation: modalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+
+      @keyframes modalPop {
+        from {
+          opacity: 0;
+          transform: scale(0.7) translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+
+      /* Navbar Scroll Effect */
+      nav {
+        transition: all 0.4s ease;
+      }
+
+      .nav-scrolled {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      
