@@ -21,7 +21,7 @@ function downloadQuestion(paperName) {
     const pdfLinks = {
         "DSA": "https://1drv.ms/b/c/a38434d5016eaac9/IQDWryv1ks07TqHoox4LU6ypAVnL05nFT1FpiuDTk4k3RSg?e=ldJbcM",
         "Cybersecurity": "https://1drv.ms/b/c/a38434d5016eaac9/IQCVRk6TAEu2Tos_16BKnWsKATvUYY7xOVgctzf3JVJfk0I?e=rMNO0t",
-        "Operating System": "https://1drv.ms/b/c/a38434d5016eaac9/IQAfE9_aSBQyS7jUZiZ6dqaNAbQXM1WgcmbYMEvRLScZuY0?e=zgY3IF",        // Fixed placeholder
+        "OperatingSystem": "https://1drv.ms/b/c/a38434d5016eaac9/IQAfE9_aSBQyS7jUZiZ6dqaNAbQXM1WgcmbYMEvRLScZuY0?e=zgY3IF",        // Fixed placeholder
         "DataMining": "https://1drv.ms/b/c/a38434d5016eaac9/IQA6BAKiqkN0Q40VGDKrfblyAfuofM9cDWkInyv9n1HYeZE?e=MWZWVq"     // Fixed placeholder
     };
 
