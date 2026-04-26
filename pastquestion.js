@@ -9,7 +9,7 @@
     // Download handler (update these links with real PDF URLs)
     function downloadQuestion(paperName) {
       const pdfLinks = {
-        "DSA": "https://binayapokhrel.com.np/pdfs/see-dsa-2081.pdf",   // ← Change this
+        "DSA": "https://1drv.ms/b/c/a38434d5016eaac9/IQDWryv1ks07TqHoox4LU6ypAVnL05nFT1FpiuDTk4k3RSg?e=ldJbcM",   // ← Change this
         "Cybersecurity": "https://binayapokhrel.com.np/pdfs/neb-cyber-2082.pdf",
         "Operating System": "https://binayapokhrel.com.np/pdfs/neb-cyber-2082.pdf",
         "DataMining": "https://binayapokhrel.com.np/pdfs/neb-cyber-2082.pdf"
