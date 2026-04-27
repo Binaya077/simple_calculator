@@ -21,8 +21,8 @@ function downloadQuestion(paperName) {
     const pdfLinks = {
         "DSA": "https://drive.google.com/file/d/10MkglL1Z_mFZn3EHHXitBgh14-H136ma/view?usp=sharing",
         "Cybersecurity": "https://drive.google.com/file/d/1CN8kBwxj0jy1ZfLLbD_igyzsaRUa294a/view?usp=sharing",
-        "OperatingSystem": "https://1drv.ms/b/c/a38434d5016eaac9/IQAfE9_aSBQyS7jUZiZ6dqaNAbQXM1WgcmbYMEvRLScZuY0?e=zgY3IF",        // Fixed placeholder
-        "DataMining": "https://1drv.ms/b/c/a38434d5016eaac9/IQA6BAKiqkN0Q40VGDKrfblyAfuofM9cDWkInyv9n1HYeZE?e=MWZWVq"     // Fixed placeholder
+        "OperatingSystem": "https://drive.google.com/file/d/1c9M527RWX3foLUDGnulLwcnfGjS7YMiG/view?usp=sharing",        // Fixed placeholder
+        "DataMining": "https://drive.google.com/file/d/1XQRckkb6rp_J2DgFVf8QArv40jZH4kWe/view?usp=sharing"     // Fixed placeholder
     };
 
     const link = pdfLinks[paperName];
